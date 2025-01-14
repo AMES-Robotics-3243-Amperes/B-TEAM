@@ -37,6 +37,13 @@ import frc.robot.splines.interpolation.SplineInterpolator;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+  public static final class ElevatorConstants {
+    public static final class PIDConstants {
+      public static final double motorP = 1;
+      public static final double motorI = 0.05;
+      public static final double motorD = 0.5;
+    }
+  }
   public static final class JoyUtilConstants {
     public static final double kDeadzone = 0.05;
     public static final double kRateLimitLeft = 20;
