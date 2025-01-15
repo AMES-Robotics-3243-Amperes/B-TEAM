@@ -16,8 +16,7 @@ public class SubsystemElevator extends SubsystemBase {
     pid = new PIDController(PIDConstants.motorP,PIDConstants.motorI,PIDConstants.motorD);
     controller = xbcontroller;
   }
-  public double SetMotor(int id, double speed) {
-    //TODO: 
-    return 0;
+  public void SetMotor(int id, double speed) {
+    //TODO: Put stuff in here
   }
 }
