@@ -17,6 +17,6 @@ public class SubsystemElevator extends SubsystemBase {
     controller = xbcontroller;
   }
   public void SetMotor(int id, double speed) {
-    //TODO: Put stuff in here
+    
   }
 }

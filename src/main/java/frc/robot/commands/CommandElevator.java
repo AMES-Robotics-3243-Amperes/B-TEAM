@@ -5,6 +5,8 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj.XboxController;
+
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class CommamndElevator extends Command {
@@ -30,10 +32,17 @@ public class CommamndElevator extends Command {
   @Override
   public void execute() {
 
-    if (m_controller.getLeftBumper()){
-      m_subsystem.
+    if (m_controller.getLeftBumperPressed()){
+      m_subsystem.SetMotor(-0.25);
     }
-
+    if (m_controller.getLeftBumperReleased())
+      m_subsystem.SetMotor(0);
+    }
+    if (m_controller.getRightBumperPressed()){
+      m_subsystem.SetMotor(0.25);
+    }
+    if (m_controller.getRightBumperPressed()){
+      m_subsystem.SetMotor(0);
     }
   }
 
