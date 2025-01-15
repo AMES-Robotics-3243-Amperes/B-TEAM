@@ -19,6 +19,8 @@ public class SubsystemElevator extends SubsystemBase {
 
   @Override
   public void periodic() {
-    
+  }
+  public double SetMotor(int id) {
+    return 0;
   }
 }
