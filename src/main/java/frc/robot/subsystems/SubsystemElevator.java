@@ -9,16 +9,16 @@ import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.ElevatorConstants.PIDConstants;
 public class SubsystemElevator extends SubsystemBase {
-  PIDController motor1;
-  PIDController motor2;
-  XboxController controller;
+  public PIDController pid;
+  public XboxController controller;
   /** Creates a new SubsystemElevator. */
-  public SubsystemElevator() {
-    motor1 = new PIDController(PIDConstants.motorP,PIDConstants.motorI,PIDConstants.motorD);
+  public SubsystemElevator(XboxController xbcontroller) {
+    pid = new PIDController(PIDConstants.motorP,PIDConstants.motorI,PIDConstants.motorD);
+    controller = xbcontroller;
   }
 
   @Override
   public void periodic() {
-    // This method will be called once per scheduler run
+    
   }
 }
