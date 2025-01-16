@@ -5,6 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.SubsystemElevator;
 import edu.wpi.first.wpilibj.XboxController;
 
 
@@ -16,7 +17,7 @@ public class CommamndElevator extends Command {
   private final XboxController m_controller;
 
   /** Creates a new CommamndElevator. */
-  public CommamndElevator(SubsystemElevator subsystem, XboxController m_controller) {
+  public CommamndElevator(SubsystemElevator subsystem, XboxController controller) {
     
     m_subsystem = subsystem;
     m_controller = controller;
@@ -35,13 +36,13 @@ public class CommamndElevator extends Command {
     if (m_controller.getLeftBumperPressed()){
       m_subsystem.SetMotor(-0.25);
     }
-    if (m_controller.getLeftBumperReleased())
+    if (m_controller.getLeftBumperReleased()){
       m_subsystem.SetMotor(0);
     }
     if (m_controller.getRightBumperPressed()){
       m_subsystem.SetMotor(0.25);
     }
-    if (m_controller.getRightBumperPressed()){
+    if (m_controller.getRightBumperReleased()){
       m_subsystem.SetMotor(0);
     }
   }
@@ -56,3 +57,4 @@ public class CommamndElevator extends Command {
     return false;
   }
 }
+
