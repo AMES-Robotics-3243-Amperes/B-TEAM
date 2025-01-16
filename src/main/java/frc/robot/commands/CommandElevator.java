@@ -10,14 +10,14 @@ import edu.wpi.first.wpilibj.XboxController;
 
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
-public class CommamndElevator extends Command {
+public class CommandElevator extends Command {
 
 
   private final SubsystemElevator m_subsystem;
   private final XboxController m_controller;
 
   /** Creates a new CommamndElevator. */
-  public CommamndElevator(SubsystemElevator subsystem, XboxController controller) {
+  public CommandElevator(SubsystemElevator subsystem, XboxController controller) {
     
     m_subsystem = subsystem;
     m_controller = controller;
@@ -34,16 +34,16 @@ public class CommamndElevator extends Command {
   public void execute() {
 
     if (m_controller.getLeftBumperPressed()){
-      m_subsystem.SetMotor(-0.25);
+      m_subsystem.SetMotor(0, -0.25);
     }
     if (m_controller.getLeftBumperReleased()){
-      m_subsystem.SetMotor(0);
+      m_subsystem.SetMotor(0, 0);
     }
     if (m_controller.getRightBumperPressed()){
-      m_subsystem.SetMotor(0.25);
+      m_subsystem.SetMotor(0,0.25);
     }
     if (m_controller.getRightBumperReleased()){
-      m_subsystem.SetMotor(0);
+      m_subsystem.SetMotor(0, 0);
     }
   }
 
