@@ -43,6 +43,14 @@ public final class Constants {
       public static final double motorI = 0.05;
       public static final double motorD = 0.5;
     }
+    public static final class MotorIDConstants {
+      // TODO: Change elevator motor constants
+      public static final int motor1ID = 0;
+      public static final int motor2ID = 1;
+    }
+    public static final class EncoderConstants {
+      //Nothing here
+    }
   }
   public static final class JoyUtilConstants {
     public static final double kDeadzone = 0.05;
