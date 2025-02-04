@@ -174,7 +174,7 @@ public class SubsystemSwerveModule {
 
     return new SwerveModulePosition(position, rotation);
   }
-
+  
   /**
    * @return Gets the output motor current of an inputted motor
    * 
